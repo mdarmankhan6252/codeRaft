@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import type { ICoffeeProduct } from '../interfaces/interface';
 
 interface CoffeeCardProps {
@@ -88,9 +89,9 @@ const CoffeeCard = ({
                     </div>
 
 
-                    <button className="px-5 py-2 rounded-full bg-primary text-white hover:opacity-90 transition">
+                    <Link to={`/product/${product.id}`}  className="px-5 py-2 rounded-full bg-primary text-white hover:opacity-90 transition">
                         {buttonText}
-                    </button>
+                    </Link>
 
                 </div>
 

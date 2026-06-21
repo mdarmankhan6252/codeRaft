@@ -9,6 +9,7 @@ import { useEffect } from "react";
 
 
 const App = () => {
+  
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -19,6 +20,8 @@ const App = () => {
       AOS.refresh();
     }, 500);
   }, []);
+
+
   return (
     <div className="overflow-x-hidden">
       <Navbar />
