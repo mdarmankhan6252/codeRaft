@@ -1,24 +1,17 @@
 import { coffeeCategories } from "../assets/data";
+import CustomTitle from "./CustomTitle";
 
 
 const Categories = () => {
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-semibold text-black/80">
-            Explore Our Coffee Categories
-          </h2>
-          <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
-            Discover a variety of handcrafted coffee styles, each offering
-            unique flavors, aromas, and experiences.
-          </p>
-        </div>
+        <CustomTitle title="Explore Our Coffee Categories" subtitle="Discover a variety of handcrafted coffee styles, each offering unique flavors, aromas, and experiences." />
 
-        <div  className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {coffeeCategories.map((coffee) => (
             <div
-            data-aos="fade-up" data-aos-duration="1500"
+              data-aos="fade-up" data-aos-duration="1500"
               key={coffee.id}
               className="bg-white border border-gray-200 rounded-2xl p-6 transition-colors duration-300 hover:shadow-xl hover:bg-primary/3"
             >
