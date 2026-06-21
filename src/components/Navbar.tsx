@@ -1,15 +1,17 @@
 import { Link } from "react-router";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaShoppingCart, FaTimes } from "react-icons/fa";
+import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const { cartItems } = useCart();
 
     return (
         <nav data-aos="fade-down" className="border-b border-slate-200 px-6 py-3 sticky top-0 left-0 right-0 bg-white/90 z-50 backdrop-blur-xl">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 
-                <Link 
+                <Link
                     to="/"
                     className="text-2xl font-light text-black/80"
                 >
@@ -19,9 +21,9 @@ const Navbar = () => {
 
                 <ul className="hidden md:flex items-center gap-6 font-normal text-black/70 *:hover:text-black">
                     <li>
-                        <a href="#">
+                        <Link to="/">
                             Home
-                        </a>
+                        </Link>
                     </li>
 
                     <li>
@@ -38,18 +40,33 @@ const Navbar = () => {
                 </ul>
 
 
-                <button
-                    onClick={() => setOpen(true)}
-                    className="md:hidden text-black/70 text-2xl"
-                >
-                    <FaBars />
-                </button>
+                <div className="flex items-center gap-6">
+                    <Link to="/cart">
+                        <div className="relative">
+                            <FaShoppingCart className="text-xl text-black/70" />
+
+                            {
+                                cartItems.length > 0 && (
+                                    <span className="absolute -top-3 -right-3 bg-primary text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                                        {cartItems.length}
+                                    </span>
+                                )
+                            }
+                        </div>
+                    </Link>
+
+                    <button
+                        onClick={() => setOpen(true)}
+                        className="md:hidden text-black/70 text-2xl"
+                    >
+                        <FaBars />
+                    </button>
+                </div>
 
 
                 <div
-                    className={`fixed top-0 right-0 h-screen w-72 bg-white shadow-xl z-50 transition-transform duration-300 ${
-                        open ? "translate-x-0" : "translate-x-full"
-                    }`}
+                    className={`fixed top-0 right-0 h-screen w-72 bg-white shadow-xl z-50 transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"
+                        }`}
                 >
 
                     <div className="flex items-center justify-between px-6 py-5 border-b border-slate-200">
@@ -71,12 +88,12 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-6 px-6 py-8 text-black/70">
 
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                to="/"
                                 onClick={() => setOpen(false)}
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
 
                         <li>
@@ -100,6 +117,8 @@ const Navbar = () => {
                     </ul>
 
                 </div>
+
+
 
             </div>
         </nav>

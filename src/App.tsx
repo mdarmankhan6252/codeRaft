@@ -6,10 +6,12 @@ import Footer from "./components/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import Checkout from "./components/Checkout";
+import Cart from "./components/Cart";
 
 
 const App = () => {
-  
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -28,7 +30,9 @@ const App = () => {
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/product/:id" Component={ProductDetails} />
-
+        <Route path="/checkout/:id" Component={Checkout} />
+        <Route path="/cart" element={<Cart />}
+        />
       </Routes>
       <Footer />
     </div>

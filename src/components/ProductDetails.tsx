@@ -1,9 +1,12 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { coffeeProducts } from "../assets/data";
 import CoffeeCard from "../components/CoffeeCard";
+import { useEffect } from "react";
+import { useCart } from "../context/CartContext";
 
 const ProductDetails = () => {
     const { id } = useParams();
+    const { addToCart } = useCart();
 
     const product = coffeeProducts.find(
         (item) => item.id === Number(id)
@@ -12,6 +15,10 @@ const ProductDetails = () => {
     const relevantProducts = coffeeProducts
         .filter((item) => item.id !== Number(id))
         .slice(0, 3);
+
+    useEffect(() => {
+        scrollTo(0, 0)
+    }, [])
 
 
     if (!product) {
@@ -23,6 +30,8 @@ const ProductDetails = () => {
             </div>
         );
     }
+
+
 
 
     return (
@@ -79,11 +88,14 @@ const ProductDetails = () => {
 
                         <div className="flex gap-4 mt-8">
 
-                            <button className="px-8 py-3 rounded-full bg-primary text-white hover:opacity-90 transition">
-                                Order Now
-                            </button>
+                            <Link
+                                to={`/checkout/${product.id}`}
+                                className="px-8 py-3 rounded-full bg-primary text-white hover:opacity-90 transition"
+                            >
+                                Buy Now
+                            </Link>
 
-                            <button className="px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition">
+                            <button onClick={() => addToCart(product)} className="px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition">
                                 Add To Cart
                             </button>
 
