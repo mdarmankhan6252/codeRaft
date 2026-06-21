@@ -1,8 +1,22 @@
 export interface ICoffeeProduct {
+    id: number;
+    name: string;
+    price: string;
+    rating: number;
+    image: string;
+    description: string;
+    sold?: string;
+    badge?: string;
+    discount?: string;
+}
+
+export interface IReview {
+
     id: number,
     name: string,
-    price: string,
-    rating: number,
+    role: string,
     image: string,
-    description: string,
+    rating: number,
+    review: string,
+
 }
