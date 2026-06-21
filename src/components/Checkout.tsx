@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { coffeeProducts } from "../assets/data";
+import { useEffect } from "react";
 
 const Checkout = () => {
 
@@ -8,6 +9,10 @@ const Checkout = () => {
     const product = coffeeProducts.find(
         (item) => item.id === Number(id)
     );
+
+    useEffect(() => {
+        scrollTo(0, 0)
+    }, [])
 
 
     if (!product) {
