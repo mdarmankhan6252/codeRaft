@@ -1,3 +1,13 @@
+import coffee1 from '../assets/coffee/1.jpeg'
+import coffee2 from '../assets/coffee/2.jpeg'
+import coffee3 from '../assets/coffee/3.jpeg'
+import coffee4 from '../assets/coffee/4.jpeg'
+import coffee5 from '../assets/coffee/5.jpeg'
+import coffee6 from '../assets/coffee/6.jpeg'
+import coffee7 from '../assets/coffee/7.jpeg'
+import coffee8 from '../assets/coffee/8.jpeg'
+import coffee9 from '../assets/coffee/9.jpeg'
+
 export const coffeeProducts = [
   {
     id: 1,
@@ -6,7 +16,7 @@ export const coffeeProducts = [
     rating: 4.8,
     sold: "1500+ Sold",
     badge: "Best Seller",
-    image: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a",
+    image: coffee1,
     description: "Strong and bold espresso made from premium coffee beans.",
   },
   {
@@ -16,7 +26,7 @@ export const coffeeProducts = [
     rating: 4.9,
     sold: "1300+ Sold",
     badge: "Popular",
-    image: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f",
+    image: coffee2,
     description: "Smooth latte blended with sweet caramel flavor.",
   },
   {
@@ -26,7 +36,7 @@ export const coffeeProducts = [
     rating: 4.7,
     sold: "1100+ Sold",
     badge: "Trending",
-    image: "https://images.unsplash.com/photo-1534778101976-62847782c213",
+    image: coffee3,
     description: "Creamy cappuccino topped with rich milk foam.",
   },
   {
@@ -36,7 +46,7 @@ export const coffeeProducts = [
     rating: 4.9,
     sold: "900+ Sold",
     badge: "Premium",
-    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d",
+    image: coffee4,
     description: "A perfect combination of coffee and chocolate.",
   },
   {
@@ -46,7 +56,7 @@ export const coffeeProducts = [
     rating: 4.6,
     sold: "850+ Sold",
     badge: "Fresh",
-    image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c",
+    image: coffee5,
     description: "Refreshing cold brewed coffee with a smooth finish.",
   },
   {
@@ -56,7 +66,7 @@ export const coffeeProducts = [
     rating: 4.8,
     sold: "700+ Sold",
     badge: "Favorite",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+    image: coffee6,
     description: "Aromatic coffee infused with vanilla sweetness.",
   },
   {
@@ -67,7 +77,7 @@ export const coffeeProducts = [
     sold: "600+ Sold",
     badge: "Limited",
     discount: "20% OFF",
-    image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735",
+    image: coffee7,
     description: "A creamy latte with latte with a rich hazelnut aroma.",
   },
   {
@@ -78,7 +88,7 @@ export const coffeeProducts = [
     sold: "550+ Sold",
     badge: "Hot Deal",
     discount: "15% OFF",
-    image: "https://images.unsplash.com/photo-1461988091159-192b6df7054f",
+    image: coffee8,
     description: "Refreshing iced coffee topped with caramel sweetness.",
   },
   {
@@ -89,7 +99,7 @@ export const coffeeProducts = [
     sold: "500+ Sold",
     badge: "Special",
     discount: "25% OFF",
-    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699",
+    image: coffee9,
     description: "A chilled chocolate coffee blended with creamy goodness.",
   },
 ];
