@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import { coffeeProducts } from "../assets/data";
 import { useEffect } from "react";
 
+
 const Checkout = () => {
 
     const { id } = useParams();
