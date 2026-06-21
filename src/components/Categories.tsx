@@ -15,11 +15,12 @@ const Categories = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div  className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {coffeeCategories.map((coffee) => (
             <div
+            data-aos="fade-up" data-aos-duration="1500"
               key={coffee.id}
-              className="bg-white border border-gray-200 rounded-2xl p-6 hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:bg-primary/3"
+              className="bg-white border border-gray-200 rounded-2xl p-6 transition-colors duration-300 hover:shadow-xl hover:bg-primary/3"
             >
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 ☕

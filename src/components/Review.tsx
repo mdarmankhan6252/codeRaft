@@ -3,7 +3,7 @@ import { reviews } from "../assets/data";
 
 const Review = () => {
     return (
-        <section className="py-20 px-4 bg-gray-50">
+        <section id="reviews" className="py-20 px-4 bg-gray-50">
             <div className="max-w-7xl mx-auto">
 
                 <div className="text-center mb-12">
@@ -18,7 +18,7 @@ const Review = () => {
                 </div>
 
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" data-aos-duration="1500" className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     {reviews.map((review) => (
                         <div

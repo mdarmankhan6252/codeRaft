@@ -20,7 +20,7 @@ const CoffeeCard = ({
     buttonText = "Order Now",
 }: CoffeeCardProps) => {
     return (
-        <div className="relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 group">
+        <div data-aos="fade-up" data-aos-duration="1500" className="relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 group">
 
             {showRank && (
                 <div className="absolute top-4 left-4 z-10">

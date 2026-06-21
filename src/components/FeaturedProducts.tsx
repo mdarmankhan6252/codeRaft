@@ -3,7 +3,7 @@ import CoffeeCard from "./CoffeeCard";
 
 const FeaturedProducts = () => {
     return (
-        <section className="py-20 px-4 bg-gray-50">
+        <section id="featured-coffee" className="py-20 px-4 bg-gray-50">
             <div className="max-w-7xl mx-auto">
 
                 <div className="text-center mb-12">
